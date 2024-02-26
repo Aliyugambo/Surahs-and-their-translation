@@ -1,4 +1,4 @@
-const API_URL = 'http://api.alquran.cloud/v1/meta';
+const API_URL = 'https://api.alquran.cloud/v1/meta';
 let SurahData = [];
 
 
