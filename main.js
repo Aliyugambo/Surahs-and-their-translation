@@ -1,6 +1,20 @@
-const API_URL = 'https://api.alquran.cloud/v1/meta';
+let API_URL = 'https://api.alquran.cloud/v1/meta';
 let SurahData = [];
 
+
+
+// Fetching My Data From the API
+async function getBooks() {
+  const resp = await fetch(API_URL);
+    // console.log(resp);
+    const data = await resp.json();
+    // console.log(data);
+    const suras = await data.data.surahs;
+    // console.log(suras);
+    SurahData = suras.references;
+    // console.log(SurahData);
+
+};
 
 // DISPLAYING MY DATA ON THE PAGE;
 async function displaySurahs() {
@@ -19,16 +33,3 @@ async function displaySurahs() {
     
 };
 displaySurahs();
-
-// Fetching My Data From the API
-async function getBooks() {
-  const resp = await fetch(API_URL);
-    // console.log(resp);
-    const data = await resp.json();
-    // console.log(data);
-    const suras = await data.data.surahs;
-    // console.log(suras);
-    SurahData = suras.references;
-    // console.log(SurahData);
-
-};
