@@ -1,11 +1,11 @@
-let API_URL = 'https://api.alquran.cloud/v1/meta';
+// let API_URL = 'https://api.alquran.cloud/v1/meta';
 let SurahData = [];
 
 
 
 // Fetching My Data From the API
 async function getBooks() {
-  const resp = await fetch(API_URL);
+  const resp = await fetch('https://api.alquran.cloud/v1/meta');
     // console.log(resp);
     const data = await resp.json();
     // console.log(data);
